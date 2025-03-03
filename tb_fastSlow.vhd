@@ -1,3 +1,4 @@
+
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.STD_LOGIC_ARITH.ALL;
@@ -60,6 +61,7 @@ begin
             wait for 10 ns;
         end loop;
 	incwrite <= '0';
+	wait for 30 ns;
 
         -- Étape 3 : Déchargement de la FIFO
         for i in 0 to 15 loop
@@ -99,4 +101,3 @@ begin
     end process;
 
 end Behavioral;
-
